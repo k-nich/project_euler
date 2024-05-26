@@ -1,0 +1,6 @@
+=LET(input,1000,
+number_array,SEQUENCE(input),
+divisible_by_five,MOD(number_array,5)=0,
+divisible_by_three,MOD(number_array,3)=0,
+include_array,IF((divisible_by_five+divisible_by_three)>0,1,0),
+SUM(number_array*include_array))
